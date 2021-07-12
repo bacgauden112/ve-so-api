@@ -17,7 +17,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
         entities: ['dist/modules/**/entities/*{.ts,.js}'],
         synchronize: true,
         authSource: configService.get('DATABASE_USER'),
-        useUnifiedTopology: true 
+        useUnifiedTopology: true,
       }),
     }),
   ],

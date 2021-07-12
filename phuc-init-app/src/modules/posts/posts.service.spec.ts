@@ -26,8 +26,6 @@ describe('PostsService', () => {
     .fn()
     .mockReturnValue({ delete: mockedDelete });
 
-
-
   const mockedPostRepository = {
     find: jest.fn(),
     findOne: jest.fn(),
@@ -36,8 +34,6 @@ describe('PostsService', () => {
     update: jest.fn(),
     createQueryBuilder,
   };
-
-
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
@@ -76,7 +72,6 @@ describe('PostsService', () => {
   it('getPostById - should throw error', async () => {
     mockedPostRepository.findOne.mockReturnValue(undefined);
     const id = 1;
-
 
     await expect(service.getPostById(id)).rejects.toThrow();
   });

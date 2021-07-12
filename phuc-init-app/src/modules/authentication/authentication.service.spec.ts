@@ -37,9 +37,9 @@ describe('The AuthenticationService', () => {
   describe('when creating a cookie', () => {
     it('should return a string', () => {
       const userId: any = 1;
-      expect(
-        typeof authenticationService.getJwtToken(userId),
-      ).toEqual('string');
+      expect(typeof authenticationService.getJwtToken(userId)).toEqual(
+        'string',
+      );
     });
   });
 });

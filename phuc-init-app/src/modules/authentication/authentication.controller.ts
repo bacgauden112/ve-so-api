@@ -47,6 +47,6 @@ export class AuthenticationController {
     const { user } = request;
     const token = this.authenticationService.getJwtToken(user.id);
     user.password = undefined;
-    return response.send({user, token});
+    return response.send({ user, token });
   }
 }

@@ -1,3 +1,3 @@
-const ConflictMongoDBError = 11000 
+const ConflictMongoDBError = 11000;
 
-export {ConflictMongoDBError}
+export { ConflictMongoDBError };

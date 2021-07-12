@@ -1,9 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ObjectID, ObjectIdColumn } from 'typeorm';
 
 @Entity('post')
 export class Post {
-  @PrimaryGeneratedColumn()
-  public id: number;
+  @ObjectIdColumn()
+  public id: ObjectID;
 
   @Column()
   public title: string;

@@ -27,10 +27,7 @@ export class AuthenticationService {
       return createdUser;
     } catch (error) {
       if (error.code === ConflictMongoDBError) {
-        throw new HttpException(
-          'Email already exist',
-          HttpStatus.CONFLICT
-        );
+        throw new HttpException('Email already exist', HttpStatus.CONFLICT);
       }
       throw new HttpException(
         'Something went wrong',

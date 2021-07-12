@@ -1,9 +1,8 @@
 import { Injectable, HttpException, HttpStatus } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import {  ObjectID, Repository } from 'typeorm';
-import { User } from './entities/user.entity';
+import { ObjectID, Repository } from 'typeorm';
 import { CreateUserDTO } from './dtos/createUser.dto';
-
+import { User } from './entities/user.entity';
 @Injectable()
 export class UsersService {
   constructor(
@@ -28,8 +27,7 @@ export class UsersService {
   }
 
   async getById(id: ObjectID) {
-    console.log(id)
-    const user = await this.userRepository.findOne(id)
+    const user = await this.userRepository.findOne(id);
     if (user) {
       return user;
     }
